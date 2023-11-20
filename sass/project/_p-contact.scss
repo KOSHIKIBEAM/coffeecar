@@ -1,0 +1,217 @@
+@use "../global" as global;
+/*====================================================================================
+# p-contact
+=====================================================================================*/
+.p-contact {
+  &__form {
+  }
+  &__list {
+    @include global.mq("pc") {
+      max-width: 935px;
+      margin: 30px auto 0;
+    }
+
+    @include global.mq("tab") {
+      margin: 30px auto 0;
+    }
+
+    @include global.mq("sp") {
+      margin: 30px auto 0;
+    }
+  }
+
+  .err {
+    color: #692326;
+    background: #f3d8da;
+    padding: 20px;
+    @include global.mq("pc") {
+      margin: 40px 0;
+    }
+
+    @include global.mq("tab") {
+      margin: 20px 0;
+    }
+    @include global.mq("sp") {
+      margin: 20px 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &:nth-child(5) {
+      margin-bottom: 76px;
+    }
+    &:nth-child(6) {
+      margin-bottom: 0;
+      align-items: flex-start;
+    }
+
+    @include global.mq("tab") {
+      flex-flow: column;
+    }
+
+    @include global.mq("sp") {
+      flex-flow: column;
+      margin-bottom: 10px;
+
+      &:nth-child(4) {
+        margin-bottom: 15px;
+      }
+      &:nth-child(5) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-title {
+      width: 300px;
+      text-align: left;
+      flex-shrink: 0;
+      font-size: 22px;
+
+      @include global.mq("tab") {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      @include global.mq("sp") {
+        font-size: 17px;
+        width: 100%;
+        margin-left: 18px;
+        margin-bottom: 5px;
+      }
+
+      span {
+        color: #e20303;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      text-align: left;
+      margin-left: 41px;
+
+      @include global.mq("tab") {
+        margin-left: 0px;
+      }
+
+      @include global.mq("sp") {
+        margin-left: 0px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 437px;
+        padding: 4.5px 8px;
+        font-size: 24px;
+        resize: vertical;
+
+        @include global.mq("tab") {
+          font-size: 20px;
+          width: 100%;
+        }
+
+        @include global.mq("sp") {
+          width: 100%;
+          font-size: 16px;
+        }
+      }
+
+      textarea {
+        height: 312px;
+
+        @include global.mq("sp") {
+          height: 107px;
+        }
+      }
+      input[type="radio"] {
+        margin-left: 30px;
+        font-size: 22px;
+
+        @include global.mq("tab") {
+          font-size: 16px;
+        }
+
+        @include global.mq("sp") {
+          font-size: 16px;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      label {
+        padding-left: 20px;
+
+        @include global.mq("pc") {
+          &:first-child {
+            padding-left: 0px;
+          }
+        }
+
+        @include global.mq("tab") {
+          font-size: 18px;
+          &:first-child {
+            padding-left: 0px;
+          }
+        }
+
+        @include global.mq("sp") {
+          padding-left: 30px;
+          &:first-child {
+            padding-left: 30px;
+          }
+        }
+      }
+
+      span {
+        @include global.mq("sp") {
+          display: block;
+        }
+      }
+    }
+
+    &-button {
+      margin-top: 70px;
+
+      @include global.mq("sp") {
+        margin-top: 20px;
+      }
+
+      input {
+        padding: 8px 80px;
+        font-size: 24px;
+        color: global.$accent-color;
+        background: #808080;
+
+        @include global.mq("tab") {
+          font-size: 20px;
+        }
+
+        @include global.mq("sp") {
+          font-size: 18px;
+          padding: 1px 21px;
+        }
+      }
+    }
+  }
+
+  &__completion {
+    margin-top: 40px;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include global.mq("sp") {
+      flex-flow: column;
+    }
+  }
+}

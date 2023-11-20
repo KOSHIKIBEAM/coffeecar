@@ -1,0 +1,43 @@
+// 色
+$main-color: #2d2d32; // メインカラー
+$accent-color: #fff; // アクセントカラー
+$text-color: #010101; // テキストカラー
+$btn-color: #8480b0; // リンクカラー
+
+// フォント
+$ff-ttl: "century-gothic", sans-serif; // タイトル
+$ff-base: "kozuka-gothic-pr6n", sans-serif; // 日本語標準
+$fz-base: 16px; // ベースフォントサイズ
+$fw-base: 400; // ベースフォントウェイト
+$lh-base: 1.6; // ベース行間
+$inner-width: 1480px; // インナー幅サイズ
+$tab-minwidth: 600px; // tabサイズ
+$pc-minwidth: 1024px; // pcサイズ
+
+// ブレークポイント
+$breakpoints: (
+  // スマホ以下の場合
+  "sp": "screen and (max-width: #{$tab-minwidth - 1px})",
+  // タブレット以上の場合
+  "tab":
+    "screen and (min-width: #{$tab-minwidth}) and (max-width: #{$pc-minwidth - 1px})",
+  // pc以上の場合
+  "pc": "screen and (min-width: #{$pc-minwidth})"
+);
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);

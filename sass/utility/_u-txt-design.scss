@@ -1,0 +1,43 @@
+@use "../global" as global;
+
+/*====================================================================================
+# utility
+=====================================================================================*/
+.u_fw-bold {
+  font-weight: 700;
+}
+
+.u_fz-lg {
+  font-size: 1.4em;
+}
+
+.u_fz-lg {
+  font-size: 1.4em;
+}
+
+.u_fc_blue {
+  color: #0a58ca;
+}
+
+.u_fc_yellow {
+  color: #f1991d;
+  font-weight: 700;
+}
+
+.u_text-link {
+  color: #f1991d;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.u_text-link-b {
+  font-weight: 700;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

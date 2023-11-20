@@ -1,0 +1,143 @@
+@use "../global" as global;
+/*====================================================================================
+# p-plan
+=====================================================================================*/
+.p-plan {
+  display: flex;
+  align-items: center;
+
+  @include global.mq("pc") {
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+
+  @include global.mq("tab") {
+    margin-top: 23px;
+    flex-flow: column;
+  }
+
+  @include global.mq("sp") {
+    margin-top: 23px;
+    flex-flow: column;
+  }
+
+  &__item {
+    @include global.mq("pc") {
+      width: calc(100% / 3 - 58px * 2 / 3);
+      margin-right: 58px;
+      display: flex;
+      flex-direction: column;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include global.mq("tab") {
+      width: 100%;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include global.mq("sp") {
+      width: 100%;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      .p-plan__item-text {
+        // padding: 31px 22px 3px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 32px;
+      background: #9f7697;
+      color: global.$accent-color;
+      padding: 3px 0;
+      font-size: 24px;
+
+      @media screen and (min-width: 1500px) {
+        font-size: 30px;
+      }
+
+      @include global.mq("sp") {
+        margin-bottom: 24px;
+        font-size: 20px;
+      }
+    }
+
+    &-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+      background: #f1eded;
+      padding: 30px 30px;
+      text-align: left;
+      line-height: 2.1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 476px;
+
+      @include global.mq("pc") {
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 1500px) {
+        min-height: 362px;
+      }
+
+      @include global.mq("tab") {
+        padding: 23px 22px;
+        line-height: 1.97;
+        min-height: 214px;
+        justify-content: flex-start;
+      }
+
+      @include global.mq("sp") {
+        font-size: 14px;
+        padding: 23px 22px;
+        line-height: 1.97;
+        min-height: 214px;
+        justify-content: flex-start;
+      }
+    }
+
+    &-price {
+      font-size: 58px;
+      margin-top: 21px;
+      color: #9f7697;
+
+      @include global.mq("tab") {
+        font-size: 48px;
+        margin-top: 7px;
+        display: inline-block;
+        margin-left: 41px;
+      }
+
+      @include global.mq("sp") {
+        font-size: 48px;
+        margin-top: 7px;
+        display: inline-block;
+        margin-left: 41px;
+      }
+
+      span {
+        font-size: 25px;
+        vertical-align: middle;
+        margin-left: 15px;
+      }
+    }
+  }
+}

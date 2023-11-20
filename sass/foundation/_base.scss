@@ -1,0 +1,27 @@
+@use "../global" as global;
+
+body {
+  color: global.$text-color;
+  font-family: global.$ff-base;
+  font-size: global.$fz-base;
+  font-weight: global.$fw-base;
+  line-height: global.$lh-base;
+  font-style: normal;
+}
+
+main {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.fadein {
+  opacity: 0;
+}

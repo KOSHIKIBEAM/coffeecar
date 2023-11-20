@@ -1,0 +1,37 @@
+@use "../global" as global;
+/*====================================================================================
+# p-about
+=====================================================================================*/
+.p-about {
+  color: global.$accent-color;
+  font-size: 27px;
+  max-width: 890px;
+  text-align: center;
+  margin: 77px auto 0;
+  line-height: 1.1;
+  font-weight: 700;
+
+  @include global.mq("sp") {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: left;
+    font-weight: 400;
+    width: 323px;
+    margin: 25px auto 0;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 290px;
+  }
+
+  p {
+    span {
+      display: block;
+      margin-bottom: 31px;
+
+      @include global.mq("sp") {
+        margin-bottom: 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "../global" as global;
+/*====================================================================================
+# l-plan
+=====================================================================================*/
+.l-plan {
+  background: global.$accent-color;
+
+  &__inner {
+    @include global.mq("pc") {
+      max-width: 1467px;
+      margin: 0 auto;
+      padding: 57px 60px 104px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include global.mq("tab") {
+      padding: 32px 80px 14px;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    @include global.mq("sp") {
+      padding: 32px 18px 14px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

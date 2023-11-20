@@ -1,0 +1,27 @@
+@use "../global" as global;
+/*====================================================================================
+# l-qanda
+=====================================================================================*/
+.l-qanda {
+  background: #c6aaae;
+
+  &__inner {
+    @include global.mq("pc") {
+      margin: 0 auto;
+      padding: 76px 0px;
+      width: 100%;
+      text-align: center;
+    }
+    @include global.mq("tab") {
+      margin: 0 auto;
+      padding: 76px 30px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include global.mq("sp") {
+      padding: 30px 15px 34px;
+      width: 100%;
+    }
+  }
+}

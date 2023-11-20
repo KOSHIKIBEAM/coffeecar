@@ -1,0 +1,71 @@
+@use "../global" as global;
+/*====================================================================================
+# p-qanda
+=====================================================================================*/
+.p-qanda {
+  text-align: center;
+  margin-top: 66px;
+
+  @include global.mq("sp") {
+    margin-top: 20px;
+  }
+
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto 22px;
+    max-width: 863px;
+    &:last-child {
+      margin: 0 auto 0px;
+    }
+
+    @include global.mq("sp") {
+      margin: 0px auto 35px 0px;
+
+      &:last-child {
+        margin: 0 auto 0px 0px;
+      }
+    }
+  }
+
+  &__q,
+  &__a {
+    display: inline-block;
+    text-align: left;
+    color: global.$accent-color;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    padding-left: 20px;
+
+    @include global.mq("sp") {
+      font-weight: 400;
+      padding-left: 17px;
+      line-height: 1.54;
+    }
+
+    &::before {
+      position: absolute;
+      color: global.$accent-color;
+      font-weight: 700;
+      font-size: 18px;
+      top: 0;
+      left: 0;
+      transform: translate(0%, 0%);
+      @include global.mq("sp") {
+        font-weight: 400;
+      }
+    }
+  }
+  &__q {
+    &::before {
+      content: "Q.";
+    }
+  }
+  &__a {
+    &::before {
+      content: "A.";
+    }
+  }
+}

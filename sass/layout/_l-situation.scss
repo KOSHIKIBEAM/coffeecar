@@ -1,0 +1,23 @@
+@use "../global" as global;
+.l-situation {
+  background: #595959;
+
+  &__inner {
+    @include global.mq("pc") {
+      max-width: 1150px;
+      margin: 0px auto;
+      padding: 73px 0px 125px;
+      width: 100%;
+    }
+    @include global.mq("tab") {
+      max-width: 1150px;
+      margin: 0px auto;
+      padding: 73px 0px 125px;
+      width: 100%;
+    }
+
+    @include global.mq("sp") {
+      width: 100%;
+    }
+  }
+}

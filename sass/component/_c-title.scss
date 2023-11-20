@@ -1,0 +1,96 @@
+@use "../global" as global;
+/*====================================================================================
+# c-title
+=====================================================================================*/
+.c-title__wrap {
+  text-align: center;
+}
+
+.c-title {
+  background: #fff;
+  font-size: 60px;
+  font-family: "century-gothic", sans-serif;
+  display: inline-block;
+  padding: 0px 83px;
+  border-radius: 41.5px;
+  line-height: 1.36;
+
+  @include global.mq("tab") {
+    font-size: 45px;
+  }
+
+  @include global.mq("sp") {
+    font-size: 25px;
+    padding: 0px 30px;
+  }
+}
+
+.l-about {
+  .c-title {
+    color: #d2ada8;
+  }
+}
+.l-situation {
+  .c-title {
+    color: #595959;
+  }
+}
+.l-plan {
+  .c-title {
+    background: #9f7697;
+    color: global.$accent-color;
+  }
+  .c-subtitle {
+    color: #9f7697;
+  }
+}
+.l-qanda {
+  .c-title {
+    color: #c6aaae;
+  }
+}
+.l-contact {
+  .c-title {
+    background: #595959;
+    color: global.$accent-color;
+  }
+  .c-subtitle {
+    color: #595959;
+  }
+}
+
+.c-subtitle {
+  font-size: 32px;
+  color: global.$accent-color;
+  margin-top: 28px;
+
+  @include global.mq("tab") {
+    margin-top: 11px;
+    font-size: 25px;
+  }
+
+  @include global.mq("sp") {
+    margin-top: 11px;
+    font-size: 20px;
+  }
+}
+
+.l-situation {
+  .c-title__wrap {
+    @include global.mq("sp") {
+      padding: 32px 15px 0;
+    }
+  }
+  .c-subtitle {
+    @include global.mq("sp") {
+      margin-top: 20px;
+    }
+  }
+}
+.l-plan {
+  .c-subtitle {
+    @include global.mq("sp") {
+      margin-top: 8px;
+    }
+  }
+}

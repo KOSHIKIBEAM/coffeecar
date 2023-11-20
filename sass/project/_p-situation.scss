@@ -1,0 +1,66 @@
+@use "../global" as global;
+/*====================================================================================
+# p-situation
+=====================================================================================*/
+.p-situation {
+  @media screen and (min-width: 1500px) {
+    padding: 70px 20px 0;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px 0;
+
+  @include global.mq("sp") {
+    flex-flow: column;
+    padding: 35px 0px 47px;
+  }
+
+  &__item {
+    &:nth-child(1) {
+      margin: 0 1.5% 0 0;
+      color: global.$accent-color;
+      font-size: 22px;
+      line-height: 1.2;
+      width: 51%;
+
+      @media screen and (min-width: 1500px) {
+        font-size: 27px;
+      }
+
+      @include global.mq("sp") {
+        font-size: 17px;
+        width: 100%;
+        margin: 0;
+        line-height: 1.4;
+        padding: 0 0 0 20px;
+      }
+
+      p {
+        span {
+          display: block;
+          margin-bottom: 30px;
+
+          &:nth-child(3) {
+            margin-bottom: 40px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      margin: -60px 0 0 1.5%;
+      width: 46%;
+
+      @include global.mq("sp") {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+    }
+  }
+}

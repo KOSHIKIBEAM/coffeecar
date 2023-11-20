@@ -1,0 +1,31 @@
+@use "../global" as global;
+/*====================================================================================
+# l-contact
+=====================================================================================*/
+.l-contact {
+  background: #fff;
+
+  &__inner {
+    @include global.mq("pc") {
+      max-width: global.$inner-width;
+      margin: 0 auto;
+      padding: 90px 60px 140px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include global.mq("tab") {
+      max-width: global.$inner-width;
+      margin: 0 auto;
+      padding: 90px 60px 80px;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include global.mq("sp") {
+      padding: 69px 15px 34px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../global" as global;
+/*====================================================================================
+# l-about
+=====================================================================================*/
+.l-about {
+  background: #d2ada8;
+
+  &__inner {
+    @include global.mq("pc") {
+      max-width: global.$inner-width;
+      margin: 0 auto;
+      padding: 47px 60px 127px;
+      width: 100%;
+    }
+    @include global.mq("tab") {
+      max-width: global.$inner-width;
+      margin: 0 auto;
+      padding: 47px 60px 127px;
+      width: 100%;
+    }
+
+    @include global.mq("sp") {
+      padding: 24px 15px 29px;
+      width: 100%;
+    }
+  }
+}
